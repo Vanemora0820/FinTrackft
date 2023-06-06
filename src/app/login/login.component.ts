@@ -24,6 +24,17 @@ constructor() {
       console.log('Por favor, ingresa tu nombre de usuario y contraseña');
     }
   }
+
+  registrar(): void {
+    if (this.email && this.password) {
+
+      console.log('Inicio de sesión exitoso');
+    } else {
+      console.log('Por favor, ingresa tu nombre de usuario y contraseña');
+    }
+
+
+  }
 }
 
 

@@ -2,7 +2,7 @@
   <div class = 'left-section'>
     <h1>INICIO DE SESIÓN</h1>
   <form class="custom-form" method="post">
-    <i class="fas fa-user" style="color: #381f51;"></i>
+    <i class="material-icons">email</i>
     <input
       type="email"
       [(ngModel)]="email"
@@ -10,7 +10,7 @@
       placeholder="Email"
       required="required"
     />
-    <i class="fad fa-lock" style="--fa-primary-color: #3d1f51; --fa-secondary-color: #3d1f51;"></i>
+    <i class="material-icons">lock</i>
     <input
       type="password"
       [(ngModel)]="password"
@@ -18,14 +18,21 @@
       placeholder="Password"
       required="required"
     />
-    <button type="submit" (click)="login()">Ingresar</button>
+
+    <button class = 'login' type="submit" (click)="login()">Ingresar</button>
+    <button class ='register' type="submit" (click)="registrar()">Registrate</button>
   </form>
   </div>
-
+<!------ 2° SECTION--------->
 <div class="right-section">
-  <h2>FINTRACK</h2>
-  <p class = 'bienvenida'> ¡Bienvenidos a nuestra revolucionaria aplicación para finanzas personales!
-    En un mundo cada vez más frenético y desafiante, entendemos lo importante que es tomar el control de nuestras finanzas para alcanzar nuestras metas y sueños.
-    Es por eso que hemos creado esta poderosa herramienta, diseñada especialmente para simplificar y potenciar tus decisiones financieras.</p>
+  <h2>FTR</h2>
+  <div>
+    <p class = 'bienvenida'> ¡Bienvenidos a nuestra revolucionaria aplicación para finanzas personales! </p>
+    <br><br><br><br>
+    <p class = 'content'>
+     En un mundo cada vez más frenético y desafiante, entendemos lo importante que es tomar el control de nuestras finanzas para alcanzar nuestras metas y sueños. <br>
+     Es por eso que hemos creado esta poderosa herramienta, diseñada especialmente para simplificar y potenciar tus decisiones financieras.</p>
+  </div>
+
 </div>
 </div>
