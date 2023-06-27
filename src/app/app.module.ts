@@ -5,6 +5,9 @@ import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { LoginserviceComponent } from './services/loginservice/loginservice.component';
+import { IncomeComponent } from './income/income.component';
+import { IncomeServiceComponent } from './services/income-service/income-service.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -17,7 +20,10 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    LoginserviceComponent,
+    IncomeComponent,
+    IncomeServiceComponent
   ],
   imports: [
     BrowserModule,
