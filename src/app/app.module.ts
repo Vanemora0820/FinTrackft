@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
@@ -9,9 +8,11 @@ import { LoginserviceComponent } from './services/loginservice/loginservice.comp
 import { IncomeComponent } from './income/income.component';
 import { IncomeServiceComponent } from './services/income-service/income-service.component';
 
+
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },  
+
 
   // Otras rutas
 ];
@@ -23,7 +24,8 @@ const routes: Routes = [
     LoginComponent,
     LoginserviceComponent,
     IncomeComponent,
-    IncomeServiceComponent
+    IncomeServiceComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,6 @@ const routes: Routes = [
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]  
 })
 export class AppModule { }

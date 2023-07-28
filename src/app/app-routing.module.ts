@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent },
 
+
+
   // Otras rutas que puedas tener
 ];
 

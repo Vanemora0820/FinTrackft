@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,10 @@ export class LoginComponent {
   email: string;
   password: string;
 
-constructor() {
+constructor(
+  private router: Router
+
+    ) {
     this.email = '';
     this.password = '';
   }
@@ -18,11 +22,8 @@ constructor() {
 
   login(): void {
     if (this.email && this.password) {
-
-      console.log('Inicio de sesión exitoso');
-    } else {
-      console.log('Por favor, ingresa tu nombre de usuario y contraseña');
     }
+   
   }
 
   registrar(): void {
