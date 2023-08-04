@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="left-section">
+    <h1>INICIO DE SESIÓN</h1>
+    <form class="custom-form" (submit)="login()">
+      <div class="form-group">
+        <i class="material-icons">email</i>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <i class="material-icons">lock</i>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <button type="submit" class="login-btn">Ingresar</button>
+    </form>
+  </div>
+
+  <!-- 2° SECTION -->
+  <div class="right-section">
+    <h2>FTR</h2>
+    <div>
+      <p class="bienvenida">
+        ¡Bienvenidos a nuestra revolucionaria aplicación para finanzas personales!
+      </p>
+      <br /><br /><br /><br />
+      <p class="content">
+        En un mundo cada vez más frenético y desafiante, entendemos lo importante que es tomar el control de nuestras finanzas para alcanzar nuestras metas y sueños. <br />
+        Es por eso que hemos creado esta poderosa herramienta, diseñada especialmente para simplificar y potenciar tus decisiones financieras.
+      </p>
+    </div>
+  </div>
+</div>

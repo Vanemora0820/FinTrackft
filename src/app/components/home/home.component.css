@@ -1,0 +1,50 @@
+/* Estilos para el contenedor principal */
+.container {
+  padding: 20px;
+}
+
+/* Estilos para la sección de información del usuario */
+.user-info {
+  background-color: rgba(255, 255, 255, 0.9); /* Hace el fondo un poco más sólido */
+  padding: 30px; /* Aumenta el padding para más espacio alrededor del contenido */
+  border-radius: 20px; /* Hace los bordes más redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra más pronunciada */
+}
+
+/* Estilos para el nombre del usuario */
+.user-name h2 {
+  margin-bottom: 10px; /* Agrega un pequeño espacio entre el nombre y los botones */
+  font-size: 28px; /* Aumenta el tamaño de fuente para el nombre del usuario */
+}
+
+/* Estilos para el ícono de finanzas */
+.finances-icon img {
+  max-width: 80px; /* Reduce el tamaño máximo del ícono para evitar que sea demasiado grande */
+}
+
+/* Estilos para los contenedores de los botones de servicios */
+.service-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Agrega un espacio entre los botones y la sección anterior */
+}
+
+/* Estilos para los botones de servicios */
+.large-btn {
+  width: 200px; /* Establece un ancho fijo para los botones */
+  padding: 20px; /* Reduce el padding para que los botones no sean demasiado grandes */
+  font-size: 20px; /* Ajusta el tamaño de fuente */
+  border-radius: 30px; /* Hace los bordes más redondeados */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Ajusta la sombra para que sea más suave */
+  background-color: #007bff; /* Color de fondo llamativo */
+  color: #fff; /* Color de texto blanco */
+  transition: background-color 0.3s ease; /* Agrega una transición suave al cambiar el color de fondo */
+
+  /* Si deseas que el ancho se ajuste automáticamente según el contenido, puedes usar flex-grow */
+  /* flex-grow: 1; */
+}
+
+/* Cambia el color de fondo del botón al pasar el cursor sobre él */
+.large-btn:hover {
+  background-color: #0056b3;
+}
