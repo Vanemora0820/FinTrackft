@@ -22,7 +22,10 @@
           required
         />
       </div>
-      <button type="submit" class="login-btn">Ingresar</button>
+      <div class="btn-container">
+        <button type="submit" class="login-btn">Ingresar</button>
+        <button type="button" class="register-btn" (click)="register()">Registrar</button>
+      </div>
     </form>
   </div>
 
@@ -33,7 +36,6 @@
       <p class="bienvenida">
         ¡Bienvenidos a nuestra revolucionaria aplicación para finanzas personales!
       </p>
-      <br /><br /><br /><br />
       <p class="content">
         En un mundo cada vez más frenético y desafiante, entendemos lo importante que es tomar el control de nuestras finanzas para alcanzar nuestras metas y sueños. <br />
         Es por eso que hemos creado esta poderosa herramienta, diseñada especialmente para simplificar y potenciar tus decisiones financieras.

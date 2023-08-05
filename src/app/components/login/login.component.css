@@ -3,18 +3,14 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  background: #ecf0f3;
-  margin: 0;
-  padding: 0;
+:host {
+  display: block;
 }
 
 /* Estilos para el contenedor principal */
 .container {
   display: flex;
   height: 100vh;
-  justify-content: center;
 }
 
 /* Estilos para la sección izquierda */
@@ -30,6 +26,10 @@ body {
   background-image: url('src/assets/img/LoginFondo.jpg');
   background-size: cover;
   padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
@@ -48,24 +48,14 @@ h2 {
 
 p {
   text-align: justify;
-  color: #fff;
-  padding: 0;
-  margin: 0;
-  font-size: 30px;
-}
-
-.content {
-  max-width: 800px;
-  margin: auto;
+  font-size: 20px;
 }
 
 .custom-form {
-  min-width: 300px;
-  max-width: 60%;
+  max-width: 400px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.15);
-  padding: 5rem 3rem;
-  margin: auto;
+  padding: 2rem;
   border-radius: 2.5rem;
   background-color: #ecf0f3;
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
@@ -79,8 +69,8 @@ p {
 
 .custom-form input {
   display: block;
-  margin: 2rem 0;
-  width: 80%;
+  margin: 1rem 0;
+  width: 100%;
   border-radius: 0.5rem;
   padding: 1rem;
   border: none;
@@ -89,32 +79,23 @@ p {
   background: #ebf5fc;
 }
 
-.login-btn {
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-btn,
+.register-btn {
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  border: #b1b1b1;
   font-size: 0.875rem;
   color: #ffffff;
   font-weight: bold;
   background-color: #280061;
-  width: 45%;
-  display: block;
+  flex: 1;
+  margin: 0.5rem;
   padding: 0.875rem 1rem;
   border-radius: 1.5rem;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
-}
-
-.material-icons {
-  color: #280061;
-  margin-right: 4px;
-  float: left;
-}
-
-.register {
-  float: right;
-}
-
-.login {
-  float: left;
 }

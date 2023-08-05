@@ -6,19 +6,19 @@ import { HomeComponent } from './components/home/home.component';
 import { IngresosComponent } from './components/ingresos/ingresos.component';
 import { LoginComponent } from './components/login/login.component';
 import { PresupuestosComponent } from './components/presupuestos/presupuestos.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
   { path: 'ingresos', component: IngresosComponent },
   { path: 'presupuestos', component: PresupuestosComponent },
   { path: 'gastos', component: GastosComponent },
   { path: 'ahorro', component: AhorrosComponent  },
-
-
+  { path: 'registro', component: RegistroComponent },
 
   // Otras rutas que puedas tener
 ];

@@ -1,0 +1,49 @@
+/* Estilo para los elementos de la lista de ingresos */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo para el botón "Crear nuevo ingreso" */
+  .btn-primary {
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el modal de creación de ingresos */
+  .modal-content {
+    width: 400px;
+    max-width: 100%;
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
+  /* Estilo para el formulario dentro del modal */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para el botón "Guardar" dentro del modal */
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Estilo para el mensaje "No hay ingresos registrados" */
+  p {
+    color: #888;
+  }
+  

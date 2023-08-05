@@ -1,1 +1,77 @@
-<p>ingresos works!</p>
+<div class="container mt-4">
+    <!-- Mostrar todos los ingresos en una tabla -->
+    <div *ngIf="ingresos.length > 0; else noIngresos">
+      <h2>Todos los ingresos</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Categorías</th>
+            <th>Usuarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ingreso of ingresos">            
+            <td>{{ ingreso.id }}</td>            
+            <td>{{ ingreso.monto | number:'1.' }}</td>
+            <td>{{ ingreso.fecha | date }}</td>
+            <td>{{ ingreso.descripcion }}</td>
+            <td>{{ ingreso.categorias }}</td>
+            <td>{{ ingreso.usuarios }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noIngresos>
+      <p>No hay ingresos registrados.</p>
+    </ng-template>
+  </div>
+  
+  <div class="container mt-4">
+    <!-- Botón para abrir el modal de creación de ingresos -->
+    <button class="btn btn-primary" (click)="openModal()">Crear nuevo ingreso</button>
+  </div>
+  
+  <!-- Modal para crear un nuevo ingreso -->
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nuevo Ingreso</h5>
+          <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="crearIngreso()">
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" class="form-control" id="fecha" [(ngModel)]="nuevoIngreso.fecha" name="fecha" required>
+              </div>              
+            <div class="form-group">
+              <label for="fecha">Fecha:</label>
+              <input type="date" class="form-control" id="fecha" [(ngModel)]="nuevoIngreso.fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="descripcion">Descripción:</label>
+              <input type="text" class="form-control" id="descripcion" [(ngModel)]="nuevoIngreso.descripcion" name="descripcion" required>
+            </div>
+            <div class="form-group">
+              <label for="categorias">Categorías:</label>
+              <input type="text" class="form-control" id="categorias" [(ngModel)]="nuevoIngreso.categorias" name="categorias" required>
+            </div>
+            <div class="form-group">
+              <label for="usuarios">Usuarios:</label>
+              <input type="text" class="form-control" id="usuarios" [(ngModel)]="nuevoIngreso.usuarios" name="usuarios" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
