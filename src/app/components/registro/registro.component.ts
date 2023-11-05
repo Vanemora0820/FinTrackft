@@ -9,18 +9,20 @@ import { Router } from '@angular/router';
 export class RegistroComponent {
 
   constructor(private router: Router) {}
-
+  
+  usuario!: string;
+  password!: string;
   nombres!: string;
   apellidos!: string;
   correo!: string;
   celular!: string;
   sexo!: string;
+  mostrarPassword: boolean = false;
 
-  registrar() {
-    // Aquí puedes implementar la lógica para enviar los datos del formulario al backend
-    // Por ejemplo, puedes llamar a un servicio que haga la petición HTTP al servidor
-    // y manejar la respuesta del servidor según tus necesidades.
+  registrar() {   
     console.log('Datos del formulario:');
+    console.log('Usuario', this.usuario);
+    console.log('Contraseña', this.password);    
     console.log('Nombres:', this.nombres);
     console.log('Apellidos:', this.apellidos);
     console.log('Correo:', this.correo);
@@ -28,9 +30,12 @@ export class RegistroComponent {
     console.log('Sexo:', this.sexo);
   }
 
-  cancelar() {
-    // Función para cancelar y regresar al menú de login
-    this.router.navigate(['/login']); // Redireccionar al componente "login"
+  cancelar() {   
+    this.router.navigate(['/login']);
+  }
+
+  mostrarOcultarPassword() {
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
 }
